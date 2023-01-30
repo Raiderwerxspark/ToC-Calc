@@ -1,0 +1,24 @@
+def calculate_throughput(selling_price, raw_material_cost):
+    return selling_price - raw_material_cost
+
+def calculate_inventory_turnover(inventory, cost_of_goods_sold):
+    return cost_of_goods_sold / inventory
+
+def calculate_operating_expense_ratio(operating_expenses, revenue):
+    return operating_expenses / revenue
+
+if __name__ == "__main__":
+    selling_price = float(input("Enter selling price: "))
+    raw_material_cost = float(input("Enter raw material cost: "))
+    inventory = float(input("Enter inventory: "))
+    cost_of_goods_sold = float(input("Enter cost of goods sold: "))
+    operating_expenses = float(input("Enter operating expenses: "))
+    revenue = float(input("Enter revenue: "))
+
+    throughput = calculate_throughput(selling_price, raw_material_cost)
+    inventory_turnover = calculate_inventory_turnover(inventory, cost_of_goods_sold)
+    operating_expense_ratio = calculate_operating_expense_ratio(operating_expenses, revenue)
+
+    print(f"Throughput is: {throughput}")
+    print(f"Inventory turnover is: {inventory_turnover}")
+    print(f"Operating expense ratio is: {operating_expense_ratio}")
