@@ -1,0 +1,25 @@
+def calculate_dbr(process_times):
+    # Find the minimum process time
+    constraint_time = min(process_times)
+
+    # Calculate the drum buffer rope
+    drum_buffer_rope = sum(process_times) - constraint_time
+
+    return drum_buffer_rope
+
+# Ask the user for the number of process times
+num_process_times = int(input("Enter the number of process times: "))
+
+# Initialize an empty list to store the process times
+process_times = []
+
+# Ask the user for each process time
+for i in range(num_process_times):
+    process_time = float(input(f"Enter process time {i + 1}: "))
+    process_times.append(process_time)
+
+# Call the calculate_dbr function
+drum_buffer_rope = calculate_dbr(process_times)
+
+# Print the result
+print("The drum buffer rope is:", drum_buffer_rope, "minutes")
